@@ -1,0 +1,15 @@
+{
+  "name": "Honda Accord 2008",
+  "type": "CU1/CU2/CU3",
+  "url": "assets/car/hondaAccord.svg",
+  "legend": [
+    "l1",
+    "l2",
+    "l3",
+    "l4",
+    "l5",
+    "l6",
+    "l7",
+    "l8"
+  ]
+}

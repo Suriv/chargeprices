@@ -1,0 +1,128 @@
+{
+  "l1": [
+    {
+      "es":"Airbag",
+      "de":"Airbag",
+      "en":"Airbag"
+    }
+  ],
+  "l2": [
+    {
+      "es":"Refuerzos estructurales",
+      "de":"Karosserieverstärkung",
+      "en":"Inglés"
+    }
+  ],
+  "l3": [
+    {
+      "es":"Unidad de control",
+      "de":"Steuergerät",
+      "en":"Inglés"
+    }
+  ],
+  "l4": [
+    {
+      "es":"Inflador de gas ",
+      "de":"Gas generator",
+      "en":"Gas generator"
+    }
+  ],
+  "l5": [
+    {
+      "es":"Cilindro de gas",
+      "de":"Gasdruckdämpfer",
+      "en":"Inglés"
+    }
+  ],
+  "l6": [
+    {
+      "es":"Batería 12V",
+      "de":"12 Volt-Batterie",
+      "en":"Inglés"
+    }
+  ],
+  "l7": [
+    {
+      "es":"Pretensores de los cinturones de seguridad",
+      "de":"Gurtstraffer",
+      "en":"Inglés"
+    }
+  ],
+  "l8": [
+    {
+      "es":"Déposito de combustible",
+      "de":"Kraftstofftank",
+      "en":"Inglés"
+    }
+  ],
+  "l9": [
+    {
+      "es":"Airbag",
+      "de":"Alemán",
+      "en":"Inglés"
+    }
+  ],
+  "l10": [
+    {
+      "es":"Punto de desconexión del Alto Voltaje",
+      "de":"Alemán",
+      "en":"Inglés"
+    }
+  ],
+  "l11": [
+    {
+      "es":"Cable de Alto Voltaje ",
+      "de":"Alemán",
+      "en":"Inglés"
+    }
+  ],
+  "l12": [
+    {
+      "es":"Airbag",
+      "de":"Alemán",
+      "en":"Inglés"
+    }
+  ],
+  "l13": [
+    {
+      "es":"Airbag",
+      "de":"Alemán",
+      "en":"Inglés"
+    }
+  ],
+  "l14": [
+    {
+      "es":"Depósito de gas (NGT/LPG) ",
+      "de":"Alemán",
+      "en":"Inglés"
+    }
+  ],
+  "l15": [
+    {
+      "es":"Protección antivuelco activa ",
+      "de":"Alemán",
+      "en":"Inglés"
+    }
+  ],
+  "l16": [
+    {
+      "es":"Válvula de seguridad (NGT/LPG)",
+      "de":"Alemán",
+      "en":"Inglés"
+    }
+  ],
+  "l17": [
+    {
+      "es":"Batería de Alto Voltaje",
+      "de":"Alemán",
+      "en":"Inglés"
+    }
+  ],
+  "l18": [
+    {
+      "es":"Sensor mecánico",
+      "de":"Alemán",
+      "en":"Inglés"
+    }
+  ]
+}
