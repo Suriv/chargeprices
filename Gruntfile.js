@@ -20,7 +20,7 @@ module.exports = grunt => {
              },
              compile: {
                  files: {
-                    '<%= webContent %>/css/rssh.css': 'src/sass/rssh.scss',
+                    '<%= webContent %>/css/cp.css': 'src/sass/cp.scss',
                 }
              },
          },
