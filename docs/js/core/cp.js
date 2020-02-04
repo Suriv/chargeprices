@@ -1,0 +1,1 @@
+function tablePrices(){$("#example").DataTable({data:jsonObject,ajax:{url:"https://my-json-server.typicode.com/jabrena/latency-problems/greek",type:"GET"}})}!function(){"use strict";tablePrices()}(jQuery);
