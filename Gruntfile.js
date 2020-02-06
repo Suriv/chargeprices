@@ -23,7 +23,7 @@ module.exports = grunt => {
                     '<%= webContent %>/css/cp.css': 'src/sass/cp.scss',
                 }
              },
-         },
+        },
          uglify: {
             srcjs: {
                 files: [
