@@ -22,10 +22,32 @@
       <h1>Charge prices</h1>
     </header>
 
-    <table id="example"></table>
+    <table id="example">
+    </table>
+
     <footer>Charge prices</footer>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="js/core/cp.js"></script>
+    <script>
+
+      $(document).ready(function() {
+
+
+
+          $('#example').DataTable( {
+            "deferRender": true,
+            "iDisplayLength": 25,
+            "order":false,
+              "ajax": {
+                "url": "https://my-json-server.typicode.com/jabrena/latency-problems/greek",
+                "dataSrc":""
+              },
+              columns: [
+                  { data: 0 }
+              ]
+          } );
+      } );
+    </script>
   </body>
 </html>
