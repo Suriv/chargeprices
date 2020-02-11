@@ -15,6 +15,7 @@
     <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#ffffff">
     <meta name="msapplication-TileColor" content="#ffffff" >
     <meta name="theme-color" content="#ffffff" >
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
     <link rel="stylesheet"  type="text/css"  href="css/cp.css" media="screen" >
   </head>
   <body>
@@ -22,7 +23,15 @@
       <h1>Charge prices</h1>
     </header>
 
-    <table id="example">
+    <table id="example" class="display" style="width:100%">
+      <thead>
+        <tr>
+          <th></th>
+          <th>G</th>
+          <th>G</th>
+          <th>G</th>
+        </tr>
+      </thead>
     </table>
 
     <footer>Charge prices</footer>
@@ -31,23 +40,74 @@
     <script type="text/javascript" src="js/core/cp.js"></script>
     <script>
 
+      function format (d) {
+
+          return '<ul>'+
+                  '<li>'+
+                      '<span>'+'Full name'+'</span>'+
+                      '<span>'+d[2]+'</span>'+
+                  '</li>'+'</ul>';
+      }
+
+
       $(document).ready(function() {
 
+      var dt = $('#example').DataTable( {
+        "processing": true,
+        "serverSide": true,
+        "ajax": {
+          "url": "https://raw.githubusercontent.com/Suriv/cp_json/master/db_big.json",
+          "dataSrc":"1580515200"
+        },
+        "columns": [
+            {
+                "class":          "details-control",
+                "orderable":      false,
+                "data":           null,
+                "defaultContent": ""
+            },
+            { "data": "Load Manager" },
+            { "data": "Power (kW)" },
+            { "data": "Cost energy (kWh)" }
+        ],
+        "order": [[1, 'asc']]
+    } );
+
+    // Array to track the ids of the details displayed rows
+    var detailRows = [];
+
+    $('#example tbody').on( 'click', 'tr td.details-control', function () {
+        var tr = $(this).closest('tr');
+        var row = dt.row( tr );
+        var idx = $.inArray( tr.attr('id'), detailRows );
+
+        if ( row.child.isShown() ) {
+            tr.removeClass( 'details' );
+            row.child.hide();
+
+            // Remove from the 'open' array
+            detailRows.splice( idx, 1 );
+        }
+        else {
+            tr.addClass( 'details' );
+            row.child( format( row.data() ) ).show();
+
+            // Add to the 'open' array
+            if ( idx === -1 ) {
+                detailRows.push( tr.attr('id') );
+            }
+        }
+    } );
+
+    // On each draw, loop over the `detailRows` array and show any child rows
+    dt.on( 'draw', function () {
+        $.each( detailRows, function ( i, id ) {
+            $('#'+id+' td.details-control').trigger( 'click' );
+        } );
+    } );
 
 
-          $('#example').DataTable( {
-            "deferRender": true,
-            "iDisplayLength": 25,
-            "order":false,
-              "ajax": {
-                "url": "https://my-json-server.typicode.com/jabrena/latency-problems/greek",
-                "dataSrc":""
-              },
-              columns: [
-                  { data: 0 }
-              ]
-          } );
-      } );
+      });
     </script>
   </body>
 </html>
