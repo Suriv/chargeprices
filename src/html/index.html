@@ -42,6 +42,9 @@
 
       function format (d) {
 
+        console.log(d.load);
+        console.log(d);
+
           return '<ul>'+
                   '<li>'+
                       '<span>'+'Full name'+'</span>'+
@@ -56,8 +59,8 @@
         "processing": true,
         "serverSide": true,
         "ajax": {
-          "url": "https://raw.githubusercontent.com/Suriv/cp_json/master/db_big.json",
-          "dataSrc":"1580515200"
+          "url": "https://raw.githubusercontent.com/Suriv/cp_json/master/db_gen.json",
+          "dataSrc":"1583020800"
         },
         "columns": [
             {
@@ -66,9 +69,9 @@
                 "data":           null,
                 "defaultContent": ""
             },
-            { "data": "Load Manager" },
-            { "data": "Power (kW)" },
-            { "data": "Cost energy (kWh)" }
+            { "data": "load" },
+            { "data": "power" },
+            { "data": "cost" }
         ],
         "order": [[1, 'asc']]
     } );
@@ -90,7 +93,7 @@
         }
         else {
             tr.addClass( 'details' );
-            row.child( format( row.data() ) ).show();
+            row.child( format( row.data() )).show();
 
             // Add to the 'open' array
             if ( idx === -1 ) {
