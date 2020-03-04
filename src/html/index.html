@@ -27,9 +27,9 @@
       <thead>
         <tr>
           <th></th>
-          <th>G</th>
-          <th>G</th>
-          <th>G</th>
+          <th>Gesto de carga</th>
+          <th>Potencia (kW)</th>
+          <th>Coste energía (kWh)</th>
         </tr>
       </thead>
     </table>
@@ -38,79 +38,5 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="js/core/cp.js"></script>
-    <script>
-
-      function format (d) {
-
-        console.log(d.load);
-        console.log(d);
-
-          return '<ul>'+
-                  '<li>'+
-                      '<span>'+'Full name'+'</span>'+
-                      '<span>'+d[2]+'</span>'+
-                  '</li>'+'</ul>';
-      }
-
-
-      $(document).ready(function() {
-
-      var dt = $('#example').DataTable( {
-        "processing": true,
-        "serverSide": true,
-        "ajax": {
-          "url": "https://raw.githubusercontent.com/Suriv/cp_json/master/db_gen.json",
-          "dataSrc":"1583020800"
-        },
-        "columns": [
-            {
-                "class":          "details-control",
-                "orderable":      false,
-                "data":           null,
-                "defaultContent": ""
-            },
-            { "data": "load" },
-            { "data": "power" },
-            { "data": "cost" }
-        ],
-        "order": [[1, 'asc']]
-    } );
-
-    // Array to track the ids of the details displayed rows
-    var detailRows = [];
-
-    $('#example tbody').on( 'click', 'tr td.details-control', function () {
-        var tr = $(this).closest('tr');
-        var row = dt.row( tr );
-        var idx = $.inArray( tr.attr('id'), detailRows );
-
-        if ( row.child.isShown() ) {
-            tr.removeClass( 'details' );
-            row.child.hide();
-
-            // Remove from the 'open' array
-            detailRows.splice( idx, 1 );
-        }
-        else {
-            tr.addClass( 'details' );
-            row.child( format( row.data() )).show();
-
-            // Add to the 'open' array
-            if ( idx === -1 ) {
-                detailRows.push( tr.attr('id') );
-            }
-        }
-    } );
-
-    // On each draw, loop over the `detailRows` array and show any child rows
-    dt.on( 'draw', function () {
-        $.each( detailRows, function ( i, id ) {
-            $('#'+id+' td.details-control').trigger( 'click' );
-        } );
-    } );
-
-
-      });
-    </script>
   </body>
 </html>
