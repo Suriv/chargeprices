@@ -3,6 +3,7 @@
 *
 * - LoadData
 * - Format
+* - Dark Mode
 */
 
 $(function() {
@@ -25,45 +26,47 @@ function dataLoad(){
       "url": "https://raw.githubusercontent.com/Suriv/cp_json/master/db_gen.json",
       "dataSrc":"1583020800"
     },
+
     "columns": [
         {
-            "class":          "details-control",
+            "class":          "legend",
             "orderable":      false,
             "data":           null,
             "defaultContent": ""
         },
-
-        { "data": "load" },
-        { "data": "power" },
-        { "data": "cost" }
+        { data: "load"},
+        { data: "power" },
+        { data: "cost" }
     ],
+    "createdRow": function ( row, data, index ) {
+      var name = data.load.substring(0,4).toLowerCase();
+      $('td',row).eq(1).addClass(name);
+    },
     "order": [[1, 'asc']]
   });
 
 // Array to track the ids of the details displayed rows
   var detailRows = [];
 
-  $('#example tbody').on( 'click', 'tr td.details-control', function () {
+  $('#example tbody').on( 'click', 'tr td.legend', function () {
     var tr = $(this).closest('tr');
-    var row = dt.row( tr );
+    var row = dt.row(tr);
     var idx = $.inArray( tr.attr('id'), detailRows );
 
     if ( row.child.isShown() ) {
-        tr.removeClass( 'details' );
+        $(this).removeClass('open');
         row.child.hide();
-
         // Remove from the 'open' array
         detailRows.splice( idx, 1 );
     }
     else {
-        tr.addClass( 'details' );
-        row.child( format( row.data() )).show();
-
+       $(this).addClass('open');
+        row.child(format(row.data())).show();
         // Add to the 'open' array
         if ( idx === -1 ) {
             detailRows.push( tr.attr('id') );
         }
-          }
+    }
   });
 
     // On each draw, loop over the `detailRows` array and show any child rows
