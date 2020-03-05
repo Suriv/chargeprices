@@ -1,4 +1,28 @@
 @charset "UTF-8";
-.legend {
 
+.legend{
+ width:100%;
+
+
+ li{
+
+   display:block;
+   font-size:1.2rem;
+   margin:0 0 1rem 0;
+   span{
+     display:inline-block;
+     width:50%;
+     &:nth-child(1){
+       font-weight:bold;
+
+     }
+   }
+ }
+ @media (map-get($rd-types, sm)){
+  display: flex;
+  flex-wrap: wrap;
+  li{
+    width:calc(100%/3);
+  }
+ }
 }

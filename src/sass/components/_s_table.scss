@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+table{
+  tbody{
+    td{
+      vertical-align: middle;
+      font-size:1.2rem;
+    }
+    td.legends{
+      position:relative;
+      width:2.5rem;
+        height:2.5rem;
+      &::before{
+        content:'';
+        width:2.5rem;
+        height:2.5rem;
+        display:inline-block;
+        @include svg(legend, center center);
+      }
+
+      &.open, &:hover{
+          &::before{
+            transform: rotate(90deg);
+          }
+        }
+    }
+  }
+}
+
+

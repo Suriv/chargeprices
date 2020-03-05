@@ -29,7 +29,7 @@ function dataLoad(){
 
     "columns": [
         {
-            "class":          "legend",
+            "class":          "legends",
             "orderable":      false,
             "data":           null,
             "defaultContent": ""
@@ -48,7 +48,7 @@ function dataLoad(){
 // Array to track the ids of the details displayed rows
   var detailRows = [];
 
-  $('#example tbody').on( 'click', 'tr td.legend', function () {
+  $('#example tbody').on( 'click', 'tr td.legends', function () {
     var tr = $(this).closest('tr');
     var row = dt.row(tr);
     var idx = $.inArray( tr.attr('id'), detailRows );
@@ -85,9 +85,7 @@ function dataLoad(){
 */
 
 function format (d) {
-
-
-    return '<ul>'+
+  return '<ul class="legend">'+
             '<li>'+
                 '<span>'+'Tipo '+'</span>'+
                 '<span>'+d.type+'</span>'+

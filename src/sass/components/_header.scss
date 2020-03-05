@@ -2,17 +2,20 @@
 
 header{
   padding:1rem;
-  position:fixed;
-  background:$std-white;
+
+  background:$std-black;
   top:0;
   h1{
     position:relative;
-    padding:0 0 0 6rem;
+    padding:1rem 0 0.5rem 6rem;
+    text-align:center;
+    color:$std-white;
     &::before{
       content:'';
       display:block;
       position: absolute;
       left:0;
+      top:0;
       width:6rem;
       height:6rem;
       @include svg(charge_prices, left top);
@@ -21,7 +24,10 @@ header{
     }
   }
   @media (map-get($rd-types, sm)){
-    position:relative;
+    h1{
+      text-align:left;
+      padding:1rem 0 0.5rem 8rem;
+    }
   }
 }
 
