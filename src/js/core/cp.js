@@ -20,8 +20,12 @@ $(function() {
 
 function dataLoad(){
   var dt = $('#example').DataTable( {
+    "sortable": true,
     "processing": true,
     "serverSide": true,
+    // "draw": 1,
+    // "recordsTotal": 57,   /// this determines the no. of records that datatables will think
+    // "recordsFiltered": 57,
     "ajax": {
       "url": "https://raw.githubusercontent.com/Suriv/cp_json/master/db_gen.json",
       "dataSrc":"1583020800"
@@ -31,6 +35,7 @@ function dataLoad(){
         {
             "class":          "legends",
             "orderable":      false,
+            "paging":         true,
             "data":           null,
             "defaultContent": ""
         },

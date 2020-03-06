@@ -1,0 +1,15 @@
+@charset "UTF-8";
+.dataTables_wrapper{
+  width:90%;
+  margin:0 auto;
+  table{
+    width:90% !important;
+  }
+  @media (map-get($rd-types, lg)){
+    table{
+      width:100% !important;
+    }
+  }
+
+
+}

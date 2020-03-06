@@ -2,6 +2,9 @@
 
 table{
   tbody{
+    tr{
+      &.odd{}
+    }
     td{
       vertical-align: middle;
       font-size:1.2rem;
@@ -12,6 +15,7 @@ table{
         height:2.5rem;
       &::before{
         content:'';
+
         width:2.5rem;
         height:2.5rem;
         display:inline-block;
@@ -20,6 +24,9 @@ table{
 
       &.open, &:hover{
           &::before{
+            position:relative;
+            top:-0.1rem;
+            left:0.1rem;
             transform: rotate(90deg);
           }
         }

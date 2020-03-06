@@ -3,13 +3,13 @@
 header{
   padding:1rem;
 
-  background:$std-black;
+  background:$ch-03;
   top:0;
   h1{
     position:relative;
     padding:1rem 0 0.5rem 6rem;
     text-align:center;
-    color:$std-white;
+    color:$ch-02;
     &::before{
       content:'';
       display:block;
