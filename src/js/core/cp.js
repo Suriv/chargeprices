@@ -23,9 +23,6 @@ function dataLoad(){
     "sortable": true,
     "processing": true,
     "serverSide": true,
-    // "draw": 1,
-    // "recordsTotal": 57,   /// this determines the no. of records that datatables will think
-    // "recordsFiltered": 57,
     "ajax": {
       "url": "https://raw.githubusercontent.com/Suriv/cp_json/master/db_gen.json",
       "dataSrc":"1583020800"
@@ -54,11 +51,11 @@ function dataLoad(){
   var detailRows = [];
 
   $('#example tbody').on( 'click', 'tr td.legends', function () {
-    var tr = $(this).closest('tr');
+    var tr = $(this).closest('tr')
     var row = dt.row(tr);
     var idx = $.inArray( tr.attr('id'), detailRows );
-
     if ( row.child.isShown() ) {
+      tr.removeClass('sel');
         $(this).removeClass('open');
         row.child.hide();
         // Remove from the 'open' array
@@ -66,10 +63,12 @@ function dataLoad(){
     }
     else {
        $(this).addClass('open');
+       tr.addClass('sel');
         row.child(format(row.data())).show();
         // Add to the 'open' array
         if ( idx === -1 ) {
             detailRows.push( tr.attr('id') );
+            $(this).closest('tr').next().addClass('details');
         }
     }
   });

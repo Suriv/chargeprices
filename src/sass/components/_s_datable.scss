@@ -1,11 +1,107 @@
 @charset "UTF-8";
 .dataTables_wrapper{
   width:90%;
-  margin:0 auto;
-  table{
-    width:90% !important;
+  margin:0 auto 2rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+
+  .dataTables_length, .dataTables_filter{
+    background: $ch-07;
+    padding: 0.5rem 4rem;
+    font-size: 1.2rem;
+    input{
+      font-size: 1.2rem;
+    }
   }
+  .dataTables_info, .dataTables_paginate{
+    font-size:1.2rem;
+  }
+
+  .dataTables_paginate{
+    .paginate_button{
+      &:hover, &.current{
+        color:$ch-02 !important;
+        background: $ch-06;
+        border:none;
+        border-radius:0.5rem;
+      }
+    }
+  }
+  table.dataTable{
+    width:70% !important;
+    padding:1rem 0;
+    thead tr{
+      background: $ch-06;
+      th{
+        font-size:1.2rem;
+        color: $ch-02;
+        vertical-align: middle;
+      }
+    }
+
+    tbody tr{
+
+      &.odd{
+        background:$ch-05;
+      }
+      &.details{
+        td{
+          padding:0.8rem 1rem 0 1rem;
+        }
+      }
+
+      &:hover, &.sel{
+        td{
+          &.sorting_1{
+            background:$ch-01;
+          }
+        }
+        background:$ch-01;
+      }
+      td{
+        vertical-align: middle;
+        font-size:1.2rem;
+
+        &:nth-child(3),&:nth-child(4){
+          text-align:center;
+        }
+
+        &.sorting_1{
+          background:#eaf3f9;
+        }
+        &.legends{
+          position:relative;
+          width:2.5rem;
+            height:2.5rem;
+          &::before{
+            content:'';
+
+            width:2.5rem;
+            height:2.5rem;
+            display:inline-block;
+            @include svg(legend, center center);
+          }
+
+          &.open, &:hover{
+              &::before{
+                position:relative;
+                top:-0.1rem;
+                left:0.1rem;
+                transform: rotate(90deg);
+              }
+            }
+        }
+      }
+
+    }
+  }
+
   @media (map-get($rd-types, lg)){
+    .dataTables_info, .dataTables_paginate{
+      width:50%;
+    }
     table{
       width:100% !important;
     }
