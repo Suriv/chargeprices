@@ -32,13 +32,34 @@
   table.dataTable{
     width:70% !important;
     padding:1rem 0;
-    thead tr{
-      background: $ch-06;
-      th{
-        font-size:1.2rem;
-        color: $ch-02;
-        vertical-align: middle;
+    thead{
+      // .sorting_desc{
+
+      // }
+      // .sorting_asc{
+
+      // }
+      .sorting{
+        @include svg(sort_both, 97% center);
+        background-size:3%;
+        &_asc{
+          @include svg(sort_asc, 97% center);
+          background-size:3%;
+        }
+        &_desc{
+          @include svg(sort_desc, 97% center);
+          background-size:3%;
+        }
       }
+
+      tr{
+        background: $ch-06;
+        th{
+          font-size:1.2rem;
+          color: $ch-02;
+          vertical-align: middle;
+        }
+    }
     }
 
     tbody tr{
@@ -49,6 +70,12 @@
       &.details{
         td{
           padding:0.8rem 1rem 0 1rem;
+        }
+        &:hover{
+          background:none;
+          td{
+            background:none;
+          }
         }
       }
 

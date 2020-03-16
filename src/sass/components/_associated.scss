@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+.dataTables_wrapper table.dataTable tbody tr td{
+  &.carg{
+    visibility: hidden;
+    display:block;
+    height: 4rem;
+    &::before{
+      visibility: visible;
+      content:'';
+      position:absolute;
+      display:block;
+      width:4rem;
+      height:4rem;
+      background: url('https://cargacoches.com/wp-content/uploads/2019/03/Logo-modificaci%C3%B3n-simple.png') no-repeat;
+    }
+  }
+  &.edp{
+
+    visibility: hidden;
+    display:block;
+    height: 4rem;
+    &::before{
+      visibility: visible;
+      content:'';
+      position:absolute;
+      display:block;
+      width:4rem;
+      height:4rem;
+      background:  url('https://www.edpenergia.es/public/img/comun/portal/logo-edp.svg') no-repeat;
+    }
+  }
+}

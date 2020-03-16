@@ -43,6 +43,7 @@ function dataLoad(){
     "createdRow": function ( row, data, index ) {
       var name = data.load.substring(0,4).toLowerCase();
       $('td',row).eq(1).addClass(name);
+
     },
     "order": [[1, 'asc']]
   });
@@ -55,7 +56,7 @@ function dataLoad(){
     var row = dt.row(tr);
     var idx = $.inArray( tr.attr('id'), detailRows );
     if ( row.child.isShown() ) {
-      tr.removeClass('sel');
+        tr.removeClass('sel');
         $(this).removeClass('open');
         row.child.hide();
         // Remove from the 'open' array
@@ -63,12 +64,14 @@ function dataLoad(){
     }
     else {
        $(this).addClass('open');
-       tr.addClass('sel');
+        tr.addClass('sel');
         row.child(format(row.data())).show();
         // Add to the 'open' array
         if ( idx === -1 ) {
             detailRows.push( tr.attr('id') );
             $(this).closest('tr').next().addClass('details');
+        }else{
+          $(this).closest('tr').next().addClass('details');
         }
     }
   });
@@ -90,6 +93,10 @@ function dataLoad(){
 
 function format (d) {
   return '<ul class="legend">'+
+            '<li>'+
+                '<span>'+'Gestor de carga '+'</span>'+
+                '<span>'+d.load+'</span>'+
+            '</li>'+
             '<li>'+
                 '<span>'+'Tipo '+'</span>'+
                 '<span>'+d.type+'</span>'+

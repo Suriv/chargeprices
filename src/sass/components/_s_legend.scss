@@ -7,7 +7,7 @@
    font-size:1.2rem;
    margin:0 0 1rem 0;
    padding:0 0 1rem 0;
-   border-bottom:0.1rem solid #f1f1f1;
+   border-bottom:0.1rem solid $ch-07;
    span{
      display:inline-block;
      width:50%;
@@ -22,10 +22,6 @@
   flex-wrap: wrap;
   li{
     width:calc(100%/2);
-
-    &:last-child{
-      width:$hundred;
-    }
   }
  }
 }
