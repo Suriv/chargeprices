@@ -1,33 +1,100 @@
 @charset "UTF-8";
 
 .dataTables_wrapper table.dataTable tbody tr td{
-  &.carg{
-    visibility: hidden;
-    display:block;
-    height: 4rem;
-    &::before{
-      visibility: visible;
-      content:'';
-      position:absolute;
-      display:block;
-      width:4rem;
-      height:4rem;
-      background: url('https://cargacoches.com/wp-content/uploads/2019/03/Logo-modificaci%C3%B3n-simple.png') no-repeat;
-    }
-  }
-  &.edp{
 
-    visibility: hidden;
-    display:block;
-    height: 4rem;
-    &::before{
-      visibility: visible;
-      content:'';
-      position:absolute;
+    &.carg, &.edp, &.emt,&.ende,
+    &.easy, &.este, &.feni, &.gic,
+    &.hone,&.iber,&.ioni, &.pors,
+    &.reps,&.tesl, &.urbe, &.wene
+    {
+      visibility: hidden;
       display:block;
-      width:4rem;
-      height:4rem;
-      background:  url('https://www.edpenergia.es/public/img/comun/portal/logo-edp.svg') no-repeat;
+      height: 4rem;
+      &::before{
+        width: 10rem;
+        height: 4rem;
+        visibility: visible;
+        content:'';
+        position:absolute;
+        display:block;
+
+      }
+    }
+   // image: url("../operators/svg/"+$img+".svg"), none;
+  &.carg::before{
+      background: url('../assets/operators/cargacoches.svg')  center center no-repeat;
+      background-size:contain;
+  }
+  &.edp::before{
+      background: url('../assets/operators/edp.svg') center center no-repeat;
+      background-size:40%;
+  }
+  &.emt::before{
+    background: url('../assets/operators/emt.svg') center center no-repeat;
+    background-size:contain;
+  }
+  &.ende::before{
+    background: url('../assets/operators/endesax.svg') center center no-repeat;
+    background-size:contain;
+  }
+  &.easy::before{
+    background: url('../assets/operators/easycharger.svg') center center no-repeat;
+    background-size:contain;
+  }
+  &.este::before{
+    background:  url('../assets/operators/estabanell.svg') center center no-repeat;
+    background-size:contain;
+  }
+  &.feni::before{
+    background: url('../assets/operators/fenie.svg') center center no-repeat;
+    background-size:contain;
+  }
+  &.gic::before{
+    background: url('../assets/operators/gic.svg') center center no-repeat;
+    background-size:contain;
+  }
+  &.hone::before{
+    background: yellowgreen url('../assets/operators/iberdrola.svg') center center no-repeat;
+    background-size:contain;
+  }
+
+  &.iber::before{
+    background: url('../assets/operators/iberdrola.svg') center center no-repeat;
+    background-size:contain;
+  }
+  &.ioni::before{
+    background: url('../assets/operators/ionity.svg') center center no-repeat;
+    background-size:contain;
+  }
+  &.pors::before{
+    background: url('../assets/operators/porsche.svg') center center no-repeat;
+    background-size:contain;
+  }
+  &.reps::before{
+    background: url('../assets/operators/repsol.svg') center center no-repeat;
+    background-size:contain;
+  }
+  &.tesl::before{
+    background: url('../assets/operators/tesla.svg') center center no-repeat;
+    background-size:contain;
+  }
+  &.urbe::before{
+    background:  url('../assets/operators/urbener.svg') center center no-repeat;
+    background-size:contain;
+  }
+  &.wene::before{
+    background: url('../assets/operators/wenea.svg') center center no-repeat;
+    background-size:contain;
+  }
+  @media (map-get($rd-types, lg)){
+    &.carg, &.edp, &.emt,&.ende,
+    &.easy, &.este, &.feni, &.gic,
+    &.hone,&.iber, &.ioni, &.pors,
+    &.reps,&.tesl, &.urbe, &.wene
+    {
+      &::before{
+        width:12rem;
+      }
     }
   }
 }
