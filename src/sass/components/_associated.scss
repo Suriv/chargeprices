@@ -2,8 +2,8 @@
 
 .dataTables_wrapper table.dataTable tbody tr td{
 
-    &.blau,&.carg, &.edp, &.emt,&.ende,
-    &.easy, &.este,&.etec, &.feni,
+    &.amb,&.blau,&.carg, &.edp, &.emt,
+    &.ende,&.easy, &.este,&.etec, &.feni,
     &.ghol,&.gic,&.iber,&.ioni, &.pors,
     &.reps,&.tesl, &.urbe, &.wene
     {
@@ -17,89 +17,96 @@
         content:'';
         position:absolute;
         display:block;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size:contain;
       }
     }
    // image: url("../operators/svg/"+$img+".svg"), none;
+  &.amb::before{
+    background-image: url('../assets/operators/amb.svg');
+
+  }
   &.blau::before{
-    background: url('../assets/operators/blaudrive.svg') center center no-repeat;
-    background-size:contain;
+    background-image: url('../assets/operators/blaudrive.svg');
+
   }
   &.carg::before{
-      background: url('../assets/operators/cargacoches.svg')  center center no-repeat;
-      background-size:contain;
+      background-image: url('../assets/operators/cargacoches.svg') ;
+
   }
   &.edp::before{
-      background: url('../assets/operators/edp.svg') center center no-repeat;
-      background-size:40%;
+      background-image: url('../assets/operators/edp.svg');
+
   }
   &.emt::before{
-    background: url('../assets/operators/emt.svg') center center no-repeat;
-    background-size:contain;
+    background-image: url('../assets/operators/emt.svg');
+
   }
   &.ende::before{
-    background: url('../assets/operators/endesax.svg') center center no-repeat;
-    background-size:contain;
+    background-image: url('../assets/operators/endesax.svg');
+
   }
   &.easy::before{
-    background: url('../assets/operators/easycharger.svg') center center no-repeat;
-    background-size:contain;
+    background-image: url('../assets/operators/easycharger.svg');
+
   }
   &.este::before{
-    background:  url('../assets/operators/estabanell.svg') center center no-repeat;
-    background-size:contain;
+    background-image:  url('../assets/operators/estabanell.svg');
+
   }
   &.etec::before{
-    background: url('../assets/operators/etecnic.svg') center center no-repeat;
-    background-size:contain;
+    background-image: url('../assets/operators/etecnic.svg');
+
   }
   &.feni::before{
-    background: url('../assets/operators/fenie.svg') center center no-repeat;
-    background-size:contain;
+    background-image: url('../assets/operators/fenie.svg');
+
   }
   &.ghol::before{
-    background: green url('../assets/operators/ghol.svg') center center no-repeat;
-    background-size:contain;
+    background-image: green url('../assets/operators/ghol.svg');
+
   }
   &.gic::before{
-    background: url('../assets/operators/gic.svg') center center no-repeat;
-    background-size:contain;
+    background-image: url('../assets/operators/gic.svg');
+
   }
   &.iber::before{
-    background: url('../assets/operators/iberdrola.svg') center center no-repeat;
-    background-size:contain;
+    background-image: url('../assets/operators/iberdrola.svg');
+
   }
   &.ioni::before{
-    background: url('../assets/operators/ionity.svg') center center no-repeat;
-    background-size:contain;
+    background-image: url('../assets/operators/ionity.svg');
+
   }
   &.pors::before{
-    background: url('../assets/operators/porsche.svg') center center no-repeat;
-    background-size:contain;
+    background-image: url('../assets/operators/porsche.svg');
+
   }
   &.reps::before{
-    background: url('../assets/operators/repsol.svg') center center no-repeat;
-    background-size:contain;
+    background-image: url('../assets/operators/repsol.svg');
+
   }
   &.tesl::before{
-    background: url('../assets/operators/tesla.svg') center center no-repeat;
-    background-size:contain;
+    background-image: url('../assets/operators/tesla.svg');
+
   }
   &.urbe::before{
-    background:  url('../assets/operators/urbener.svg') center center no-repeat;
-    background-size:contain;
+    background-image:  url('../assets/operators/urbener.svg');
+
   }
   &.wene::before{
-    background: url('../assets/operators/wenea.svg') center center no-repeat;
-    background-size:contain;
+    background-image: url('../assets/operators/wenea.svg');
+
   }
   @media (map-get($rd-types, lg)){
-    &.blau,&.carg, &.edp, &.emt,&.ende,
-    &.easy, &.este,&.etec, &.feni,
+    &.amb,&.blau,&.carg, &.edp, &.emt,
+    &.ende,&.easy, &.este,&.etec, &.feni,
     &.ghol,&.gic,&.iber,&.ioni, &.pors,
     &.reps,&.tesl, &.urbe, &.wene
     {
       &::before{
-        width:12rem;
+        width:40rem;
       }
     }
   }
