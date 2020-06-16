@@ -2,9 +2,9 @@
 
 .dataTables_wrapper table.dataTable tbody tr td{
 
-    &.carg, &.edp, &.emt,&.ende,
-    &.easy, &.este, &.feni, &.gic,
-    &.hone,&.iber,&.ioni, &.pors,
+    &.blau,&.carg, &.edp, &.emt,&.ende,
+    &.easy, &.este,&.etec, &.feni,
+    &.ghol,&.gic,&.iber,&.ioni, &.pors,
     &.reps,&.tesl, &.urbe, &.wene
     {
       visibility: hidden;
@@ -17,10 +17,13 @@
         content:'';
         position:absolute;
         display:block;
-
       }
     }
    // image: url("../operators/svg/"+$img+".svg"), none;
+  &.blau::before{
+    background: url('../assets/operators/blaudrive.svg') center center no-repeat;
+    background-size:contain;
+  }
   &.carg::before{
       background: url('../assets/operators/cargacoches.svg')  center center no-repeat;
       background-size:contain;
@@ -45,19 +48,22 @@
     background:  url('../assets/operators/estabanell.svg') center center no-repeat;
     background-size:contain;
   }
+  &.etec::before{
+    background: url('../assets/operators/etecnic.svg') center center no-repeat;
+    background-size:contain;
+  }
   &.feni::before{
     background: url('../assets/operators/fenie.svg') center center no-repeat;
+    background-size:contain;
+  }
+  &.ghol::before{
+    background: green url('../assets/operators/ghol.svg') center center no-repeat;
     background-size:contain;
   }
   &.gic::before{
     background: url('../assets/operators/gic.svg') center center no-repeat;
     background-size:contain;
   }
-  &.hone::before{
-    background: yellowgreen url('../assets/operators/iberdrola.svg') center center no-repeat;
-    background-size:contain;
-  }
-
   &.iber::before{
     background: url('../assets/operators/iberdrola.svg') center center no-repeat;
     background-size:contain;
@@ -87,9 +93,9 @@
     background-size:contain;
   }
   @media (map-get($rd-types, lg)){
-    &.carg, &.edp, &.emt,&.ende,
-    &.easy, &.este, &.feni, &.gic,
-    &.hone,&.iber, &.ioni, &.pors,
+    &.blau,&.carg, &.edp, &.emt,&.ende,
+    &.easy, &.este,&.etec, &.feni,
+    &.ghol,&.gic,&.iber,&.ioni, &.pors,
     &.reps,&.tesl, &.urbe, &.wene
     {
       &::before{

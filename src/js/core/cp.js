@@ -25,7 +25,7 @@ function dataLoad(){
     "serverSide": true,
     "ajax": {
       "url": "https://raw.githubusercontent.com/Suriv/cp_json/master/db_gen.json",
-      "dataSrc":"1583020800"
+      "dataSrc":"1590969600"
     },
 
     "columns": [
@@ -114,7 +114,7 @@ function format (d) {
                 '<span>'+d.month_fee+'</span>'+
             '</li>'+
              '<li>'+
-                '<span>'+'Exceso de ocupacion (€)'+'</span>'+
+                '<span>'+'Tasa de inactividad / Exceso   (€)'+'</span>'+
                 '<span>'+d.overcrowding+'</span>'+
             '</li>'+
              '<li>'+
