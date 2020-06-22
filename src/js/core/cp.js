@@ -125,5 +125,13 @@ function format (d) {
                 '<span>'+'Ubicación '+'</span>'+
                 '<span>'+d.location+'</span>'+
             '</li>'+
+            '<li>'+
+                '<span>'+'Aplicación '+'</span>'+
+                '<span><a href='+d.app_url+' target="blank">'+d.app_name+'</a></span>'+
+            '</li>'+
+            '<li>'+
+                '<span>'+'Observaciones '+'</span>'+
+                '<span>'+d.ob+'</span>'+
+            '</li>'+
             '</ul>';
 }
