@@ -64,7 +64,7 @@
 
   }
   &.ghol::before{
-    background-image: green url('../assets/operators/ghol.svg');
+    background-image: url('../assets/operators/ghol.svg');
 
   }
   &.gic::before{
@@ -106,7 +106,7 @@
     &.reps,&.tesl, &.urbe, &.wene
     {
       &::before{
-        width:40rem;
+        width:30rem;
       }
     }
   }
