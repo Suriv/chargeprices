@@ -6,10 +6,7 @@
 * - Dark Mode
 */
 
-$(function() {
 
-  dataLoad();
-});
 
 
 /**
@@ -135,3 +132,8 @@ function format (d) {
             '</li>'+
             '</ul>';
 }
+
+
+$(function() {
+  dataLoad();
+});

@@ -27,8 +27,7 @@ module.exports = grunt => {
          uglify: {
             srcjs: {
                 files: [
-                  {expand: true, cwd: 'src/js/core', src: '**.js', dest: '<%= webContent %>/js/core'},
-                  {expand: true, cwd: 'src/js/lib', src: '**.js', dest: '<%= webContent %>/js/lib'},
+                  {expand: true, cwd: 'src/js/', src: '**.js', dest: '<%= webContent %>/js/'},
                 ]
             }
           },
