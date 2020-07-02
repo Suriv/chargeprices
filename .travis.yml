@@ -1,4 +1,4 @@
-no### Project specific config ###
+### Project specific config ###
 language: node_js
 node_js:
   - "12.16.3"
