@@ -24,7 +24,7 @@ function dataLoad(){
     "start": 5,
     "ajax": {
       "url": "https://raw.githubusercontent.com/Suriv/cp_json/master/db_gen.json",
-      "dataSrc":"1590969600"
+      "dataSrc":"1593561600"
     },
 
     "columns": [
