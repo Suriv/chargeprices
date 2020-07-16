@@ -1,13 +1,27 @@
 /**
 * @author   iSuriv
 *
+* - dateJson
 * - LoadData
 * - Format
 * - Dark Mode
 */
 
+var chargeAPI ="https://raw.githubusercontent.com/Suriv/cp_json/master/db_gen.json";
 
+/**
+* @function
+* @name dateJson
+* @description Function get date
+*/
 
+function dateJson(){
+
+  $.getJSON( chargeAPI, function( data){
+    console.log( "success" );
+  });
+
+};
 
 /**
 * @function
@@ -23,7 +37,7 @@ function dataLoad(){
     "pages": 6,
     "start": 5,
     "ajax": {
-      "url": "https://raw.githubusercontent.com/Suriv/cp_json/master/db_gen.json",
+      "url": chargeAPI,
       "dataSrc":"1593561600"
     },
 
@@ -138,4 +152,5 @@ function format (d) {
 
 $(function() {
   dataLoad();
+  dateJson();
 });
