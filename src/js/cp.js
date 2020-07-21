@@ -17,9 +17,19 @@ var chargeAPI ="https://raw.githubusercontent.com/Suriv/cp_json/master/db_gen.js
 
 function dateJson(){
 
-  $.getJSON( chargeAPI, function( data){
-    console.log( "success" );
-  });
+
+
+  $.ajax({
+    url: chargeAPI,
+    success: function(data) {
+
+             console.log(JSON.parse(data))
+            //this is what I am unsure about?
+        }
+    });
+  // $.getJSON( chargeAPI, function( data){
+  //   console.log( data);
+  // });
 
 };
 
@@ -34,8 +44,8 @@ function dataLoad(){
     "sortable": true,
     "processing": true,
     "serverSide": false,
-    "pages": 6,
-    "start": 5,
+    "pageLength": 9,
+    "start": 1,
     "ajax": {
       "url": chargeAPI,
       "dataSrc":"1593561600"
