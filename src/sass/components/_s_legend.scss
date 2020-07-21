@@ -3,7 +3,8 @@
 .legend{
  width:100%;
  li{
-   display:block;
+   display:flex;
+   align-items: center;
    font-size:1.2rem;
    margin:0 0 1rem 0;
    padding:0 0 1rem 0;
