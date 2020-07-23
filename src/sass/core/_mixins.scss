@@ -28,4 +28,11 @@
   }
 }
 
+@mixin font-face($font-family, $font-url, $font-name) {
+  @font-face {
+	font: {family: $font-family;}
+	src: url('../'+$font-url + '/' + $font-name + '.woff2') format('woff2');
+  }
+}
+
 

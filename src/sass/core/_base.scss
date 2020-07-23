@@ -1,23 +1,28 @@
 @charset "UTF-8";
+
+
 html{
 	-ms-text-size-adjust: 100%;
  	-webkit-text-size-adjust: 100%;
  	-moz-text-size-adjust: 100%;
 	font-size:x-small;
 }
+header, article, div{
+	outline:none;
+}
 
+html,
+body {
+  @extend %bodyCopy;
+
+}
 
 body{
-
-    font-family: 'Arial';
-    position:relative;
-    overflow-y:visible;
-    padding:0;
-    margin:0;
+    background:$ch-03;
 }
 
 a{
-  color:$ch-06;
+  color:$ch-01;
   text-decoration:none;
   font-weight:bold;
   &:hover{
@@ -29,15 +34,3 @@ a{
 }
 
 svg{display:inline-block; cursor:pointer;}
-
-h1{
-  font-size:3.6rem;
-  color:$ch-04;
-}
-h2{
-  font-size:3rem;
-  color:$ch-04;
-  text-align:center;
-  padding:1rem 0;
-  margin:0 0 0 0;
-}

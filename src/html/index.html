@@ -12,25 +12,29 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="assets/favicon/site.webmanifest">
-    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#2c311e">
-    <meta name="msapplication-TileColor" content="#2c311e">
-    <meta name="theme-color" content="#ffffff" >
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#333333">
+    <meta name="msapplication-TileImage" content="assets/favicon/mstile-144x144.png">
+    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#333333">
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css"> -->
     <link rel="stylesheet"  type="text/css"  href="css/cp.css" media="screen" >
   </head>
   <body>
     <header>
       <h1>ChargePrices</h1>
+      <h2>Precios de carga en estaciones Españolas</h2>
+      <h3>Mes 2020</h3>
     </header>
     <article>
-      <h2>Precios de carga en estaciones públicas Españolas</h2>
-      <table id="example" class="order-column" cellspacing="0">
+      <table id="example" class="order-column pageResize" cellspacing="0">
         <thead>
           <tr>
             <th></th>
             <th>Gesto de carga</th>
             <th>Potencia <br>(kW)</th>
-            <th>Coste energía <br>(kWh)</th>
+            <th>Coste <br>(kWh)</th>
           </tr>
         </thead>
       </table>
@@ -38,6 +42,9 @@
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="//cdn.datatables.net/plug-ins/1.10.21/features/pageResize/dataTables.pageResize.min.js"></script>
+
+
     <script type="text/javascript" src="js/cp.js"></script>
 
   </body>

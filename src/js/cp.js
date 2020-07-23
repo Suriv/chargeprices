@@ -41,10 +41,17 @@ function dateJson(){
 
 function dataLoad(){
   var dt = $('#example').DataTable( {
+  //  "responsive": true,
     "sortable": true,
     "processing": true,
     "serverSide": false,
+    "info":     false,
+    "lengthChange": false,
     "pageLength": 9,
+    "language": {
+      "sSearch": "",
+      "searchPlaceholder": "Buscar"
+    },
     "start": 1,
     "ajax": {
       "url": chargeAPI,

@@ -2,14 +2,15 @@
 // Copyright (c) 2015-2020 Rescue.
 
 // Imports & config
-
+@import "core/_mixins";
 @import "core/var";
 @import "lib/reset";
-
-//Base sizes
-@import "core/_mixins";
+@import "core/fonts";
 @import "core/base";
 @import "core/grid";
+
+//Base sizes
+
 @import "components/header";
 @import "components/s_datable";
 @import "components/s_legend";

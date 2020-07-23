@@ -1,11 +1,7 @@
 @charset "UTF-8";
 .dataTables_wrapper{
-  width:90%;
+  width:100%;
   margin:0 auto 2rem auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
 
   .dataTables_processing{
     height:6.4rem;
@@ -16,30 +12,40 @@
 
   }
 
-  .dataTables_length, .dataTables_filter{
-    background: $ch-07;
-    padding: 0.5rem 4rem;
-    font-size: 1.2rem;
+  .dataTables_filter{
+    margin:0 0 2rem 0;
+    text-align:left;
     input{
-      font-size: 1.2rem;
+      width:100%;
+      padding:0.5rem;
+      font-size: 1.4rem;
     }
   }
-  .dataTables_info, .dataTables_paginate{
-    font-size:1.2rem;
-  }
-
   .dataTables_paginate{
-    .paginate_button{
-      &:hover, &.current{
-        color:$ch-02 !important;
-        background: $ch-06;
-        border:none;
-        border-radius:0.5rem;
-      }
+    width:100%;
+    padding:2rem 0;
+    text-align:center;
+    font-size:1.4rem;
+    border-top:0.1rem solid $ch-05;
+    border-bottom:0.1rem solid $ch-05;
+
+    .ellipsis{
+      color:$ch-02;
     }
+    a{
+      color:$ch-02;
+      padding:0.5rem 1.1rem;
+      border-radius: 0.5rem;
+      border: none;
+      background:none;
+        &:hover, &.current{
+          text-decoration:none;
+          background: $ch-01;
+        }
+      }
   }
   table.dataTable{
-    width:70% !important;
+    width:100% !important;
     padding:1rem 0;
     thead{
       // .sorting_desc{
@@ -50,19 +56,16 @@
       // }
       .sorting{
         @include svg(sort_both, 97% center);
-        background-size:3%;
+
         &_asc{
           @include svg(sort_asc, 97% center);
-          background-size:3%;
         }
         &_desc{
           @include svg(sort_desc, 97% center);
-          background-size:3%;
         }
       }
 
       tr{
-        background: $ch-06;
         th{
           font-size:1.2rem;
           color: $ch-02;
@@ -72,10 +75,6 @@
     }
 
     tbody tr{
-
-      &.odd{
-        background:$ch-05;
-      }
       &.details{
         td{
           padding:0.8rem 1rem 0 1rem;
@@ -90,11 +89,11 @@
 
       &:hover, &.sel{
         td{
-          &.sorting_1{
-            background:$ch-01;
-          }
+          // &.sorting_1{
+          //  background:$ch-01;
+          // }
         }
-        background:$ch-01;
+        //background:$ch-01;
       }
       td{
         vertical-align: middle;
@@ -138,11 +137,10 @@
   }
 
   @media (map-get($rd-types, lg)){
-    .dataTables_info, .dataTables_paginate{
-      width:50%;
-    }
     table{
-      width:100% !important;
+      &.dataTable{
+        width:70% !important;
+      }
     }
   }
 
