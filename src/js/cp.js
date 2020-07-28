@@ -39,9 +39,11 @@ function dateJson(){
 * @description Function to load the data
 */
 
+
 function dataLoad(){
   var dt = $('#example').DataTable( {
-  //  "responsive": true,
+   "responsive": true,
+   "autoWidth": false,
     "sortable": true,
     "processing": true,
     "serverSide": false,

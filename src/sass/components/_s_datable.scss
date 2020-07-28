@@ -2,6 +2,7 @@
 .dataTables_wrapper{
   width:100%;
   margin:0 auto 2rem auto;
+  @extend %fontnormal;
 
   .dataTables_processing{
     height:6.4rem;
@@ -41,19 +42,16 @@
         &:hover, &.current{
           text-decoration:none;
           background: $ch-01;
+          color:$ch-04;
         }
       }
   }
-  table.dataTable{
+ .dataTable{
     width:100% !important;
-    padding:1rem 0;
+    color:$ch-06;
+    font-weight: 600;
+    font-size:1.2rem;
     thead{
-      // .sorting_desc{
-
-      // }
-      // .sorting_asc{
-
-      // }
       .sorting{
         @include svg(sort_both, 97% center);
 
@@ -67,17 +65,23 @@
 
       tr{
         th{
-          font-size:1.2rem;
-          color: $ch-02;
+
           vertical-align: middle;
+
+          &:nth-child(2){
+            width:47%;
+          }
         }
       }
     }
 
     tbody tr{
       &.details{
+        background:$ch-04;
         td{
-          padding:0.8rem 1rem 0 1rem;
+          padding:0.5rem;
+
+
         }
         &:hover{
           background:none;
@@ -89,15 +93,15 @@
 
       &:hover, &.sel{
         td{
-          // &.sorting_1{
-          //  background:$ch-01;
-          // }
+          &.sorting_1{
+            background:$ch-04;
+          }
         }
-        //background:$ch-01;
+        background:$ch-04;
       }
       td{
         vertical-align: middle;
-        font-size:1.2rem;
+        padding:1rem 0 1rem 0.5rem;
 
         &:nth-child(3),&:nth-child(4){
           text-align:center;
@@ -107,26 +111,28 @@
         }
 
         &.sorting_1{
-          background:#eaf3f9;
+          background:$ch-04;
         }
         &.legends{
           position:relative;
           width:2.5rem;
-            height:2.5rem;
+          height:4rem;
           &::before{
-            content:'';
-
-            width:2.5rem;
-            height:2.5rem;
+            content:'...';
+            position: relative;
+            top: -0.2rem;
+            font-size:2rem;
+            line-height: 0;
             display:inline-block;
-            @include svg(legend, center center);
+            // @include svg(legend, center center);
           }
 
           &.open, &:hover{
               &::before{
-                position:relative;
-                top:-0.1rem;
-                left:0.1rem;
+                color:$ch-01;
+                top:0;
+                line-height: 2rem;
+                left: 0.5rem;
                 transform: rotate(90deg);
               }
             }
@@ -137,12 +143,10 @@
   }
 
   @media (map-get($rd-types, lg)){
-    table{
-      &.dataTable{
-        width:70% !important;
-      }
+    width: 50%;
+    .dataTable{
+      font-size:1.4rem;
     }
+
   }
-
-
 }

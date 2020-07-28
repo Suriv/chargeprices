@@ -2,13 +2,15 @@
 
 .legend{
  width:100%;
+
+ @extend %bodyCopy;
  li{
    display:flex;
    align-items: center;
    font-size:1.2rem;
    margin:0 0 1rem 0;
    padding:0 0 1rem 0;
-   border-bottom:0.1rem solid $ch-07;
+   border-bottom:0.1rem solid $ch-05;
    span{
      display:inline-block;
      width:50%;
