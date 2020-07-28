@@ -130,6 +130,14 @@ function format (d) {
                 '<span>'+d.load+'</span>'+
             '</li>'+
             '<li>'+
+            '<span>'+'Potencia '+'</span>'+
+            '<span>'+d.power+'</span>'+
+            '</li>'+
+            '<li>'+
+                '<span>'+'Coste '+'</span>'+
+                '<span>'+d.cost+'</span>'+
+            '</li>'+
+            '<li>'+
                 '<span>'+'Tipo '+'</span>'+
                 '<span>'+d.type+'</span>'+
             '</li>'+
