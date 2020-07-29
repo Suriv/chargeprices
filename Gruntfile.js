@@ -52,6 +52,9 @@ module.exports = grunt => {
             htmlComponent:{
                files: [{expand: true, cwd: 'src/html', src: '**/*', dest: '<%= webContent %>/'}]
             },
+            txtComponent:{
+              files: [{expand: true, cwd: 'src/txt', src: '**/*', dest: '<%= webContent %>/'}]
+           },
             json:{
               files: [{expand: true, cwd: 'src/json', src: '**/*', dest: '<%= webContent %>/json'}]
            },
@@ -70,6 +73,9 @@ module.exports = grunt => {
             folderhtm:{
               src:['<%= webContent %>/*.html']
             },
+            foldertxt:{
+              src:['<%= webContent %>/*.txt']
+            },
         },
 
         watch: {
@@ -81,6 +87,7 @@ module.exports = grunt => {
             jsCore: {files: ['src/js/**.js'], tasks: ['uglify:srcjs']},
             libassets: {files: ['src/assets/**/*'], tasks: ['clean:folderAssets','copy:libassets']},
             htmlComponent: {files: ['src/html/**'], tasks: ['copy:htmlComponent']},
+            txtComponent: {files: ['src/txt/**'], tasks: ['copy:txtComponent']},
             jsonFolder: {files: ['src/json/**'], tasks: ['copy:json']},
         }
     });

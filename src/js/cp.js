@@ -8,16 +8,18 @@
 */
 
 var chargeAPI ="https://raw.githubusercontent.com/Suriv/cp_json/master/db_gen.json";
-
+var n = new Date();
+var months=['Enero','Febrero','Marzo','Abril', 'Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
 /**
 * @function
 * @name dateJson
 * @description Function get date
 */
 
+
 function dateJson(){
 
-
+  $('header h3').text(months[n.getMonth()]+'  '+n.getFullYear());
 
   $.ajax({
     url: chargeAPI,
@@ -68,12 +70,12 @@ function dataLoad(){
             "data":           null,
             "defaultContent": ""
         },
-        { data: "load"},
+        { data: "cpo"},
         { data: "power" },
         { data: "cost" }
     ],
     "createdRow": function ( row, data, index ) {
-      var name = data.load.substring(0,4).toLowerCase();
+      var name = data.cpo.substring(0,4).toLowerCase();
       $('td',row).eq(1).addClass(name);
 
     },
@@ -126,8 +128,8 @@ function dataLoad(){
 function format (d) {
   return '<ul class="legend">'+
             '<li>'+
-                '<span>'+'Gestor de carga '+'</span>'+
-                '<span>'+d.load+'</span>'+
+                '<span>'+'Operadores de Punto de Carga '+'</span>'+
+                '<span>'+d.cpo+'</span>'+
             '</li>'+
             '<li>'+
             '<span>'+'Potencia '+'</span>'+

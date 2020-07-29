@@ -6,16 +6,19 @@
  @extend %bodyCopy;
  li{
    display:flex;
-   align-items: center;
+   //align-items: center;
    font-size:1.2rem;
    margin:0 0 1rem 0;
    padding:0 0 1rem 0;
    border-bottom:0.1rem solid $ch-05;
    span{
      display:inline-block;
-     width:50%;
+     width:60%;
+     padding:0.5rem;
+
      &:nth-child(1){
       font-weight: 400;
+      width:40%;
      }
    }
  }
