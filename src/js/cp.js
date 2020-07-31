@@ -7,9 +7,12 @@
 * - Dark Mode
 */
 
-var chargeAPI ="https://raw.githubusercontent.com/Suriv/cp_json/master/db_gen.json";
-var n = new Date();
-var months=['Enero','Febrero','Marzo','Abril', 'Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+var chargeAPI ="https://raw.githubusercontent.com/Suriv/cp_json/master/db_gen.json",
+n = new Date(),
+months=['Enero','Febrero','Marzo','Abril', 'Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
+date = months[n.getMonth()];
+
+
 /**
 * @function
 * @name dateJson
@@ -59,7 +62,7 @@ function dataLoad(){
     "start": 1,
     "ajax": {
       "url": chargeAPI,
-      "dataSrc":"1593561600"
+      "dataSrc":date
     },
 
     "columns": [
