@@ -49,7 +49,7 @@
  .dataTable{
     width:100% !important;
     color:$ch-06;
-    font-weight: 600;
+    font-weight: 400;
     font-size:1.2rem;
     thead{
       .sorting{
@@ -67,7 +67,7 @@
         th{
           padding:1rem 0;
           vertical-align: middle;
-
+          font-weight: 400;
           &:nth-child(2){
             width:32%;
           }
@@ -144,8 +144,12 @@
     width: 50%;
     .dataTable{
       font-size:1.4rem;
-      thead tr th:nth-child(2){
-        width:50%;
+      font-weight: 600;
+      thead tr th{
+        font-weight:600;
+        &:nth-child(2){
+          width:50%;
+        }
       }
 
     }
