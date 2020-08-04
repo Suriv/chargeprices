@@ -4,6 +4,7 @@ header{
   padding:1rem;
   top:0;
   color:$ch-02;
+  @extend %fontnormal;
   h1{
     position:relative;
     padding:1rem 0 0.5rem 6rem;
@@ -18,12 +19,12 @@ header{
     font-size:1.6rem;
     display: flex;
     flex-wrap: wrap;
-    margin:1rem 0;
+    margin:2rem 0;
   }
   h3{
     font-size:1.4rem;
     text-align:right;
-    margin:0 0 0.5rem 0;
+    margin:0 0 1rem 0;
   }
   @media (map-get($rd-types, lg)){
     width: 50%;

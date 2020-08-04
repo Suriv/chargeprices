@@ -168,7 +168,7 @@ function format (d) {
             '</li>'+
              '<li>'+
                 '<span>'+'Ubicación '+'</span>'+
-                '<span>'+d.location+'</span>'+
+                '<span><a href='+d.location_url+' target="blank">'+d.location+'</a></span>'+
             '</li>'+
             '<li>'+
                 '<span>'+'Aplicación '+'</span>'+
