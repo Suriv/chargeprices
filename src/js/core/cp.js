@@ -54,7 +54,7 @@ function dataLoad(){
     "serverSide": false,
     "info":     false,
     "lengthChange": false,
-    "pageLength": 9,
+    "pageLength": 7,
     "language": {
       "sSearch": "",
       "searchPlaceholder": "Buscar"
