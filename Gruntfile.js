@@ -27,7 +27,7 @@ module.exports = grunt => {
          uglify: {
             srcjs: {
                 files: [
-                  {expand: true, cwd: 'src/js/', src: '**.js', dest: '<%= webContent %>/js/'},
+                  {expand: true, cwd: 'src/js/core', src: '**.js', dest: '<%= webContent %>/js/'},
                 ]
             }
           },
@@ -52,6 +52,9 @@ module.exports = grunt => {
             htmlComponent:{
                files: [{expand: true, cwd: 'src/html', src: '**/*', dest: '<%= webContent %>/'}]
             },
+            jsLib:{
+              files: [{expand: true, cwd: 'src/js/lib', src: '**/*', dest: '<%= webContent %>/js/'}]
+           },
             txtComponent:{
               files: [{expand: true, cwd: 'src/txt', src: '**/*', dest: '<%= webContent %>/'}]
            },
@@ -61,8 +64,11 @@ module.exports = grunt => {
           },
           clean: {
             options: {force:true},
-            folderJs:{
-              src:['<%= webContent %>/js/*']
+            folderJsCore:{
+              src:['<%= webContent %>/js/core/*']
+            },
+            folderJsLib:{
+              src:['<%= webContent %>/js/lib/*']
             },
             folderJson:{
               src:['<%= webContent %>/json/*']
@@ -84,11 +90,12 @@ module.exports = grunt => {
             },
             gruntfile: {files: ['Gruntfile.js'], tasks: ['default']},
             sass: { files: ["src/sass/**/*.scss"], tasks: ["sass"] },
-            jsCore: {files: ['src/js/**.js'], tasks: ['uglify:srcjs']},
+            jsCore: {files: ['src/js/core/**.js'], tasks: ['clean:folderJsCore','uglify:srcjs']},
+            jsLib: {files: ['src/js/lib/**.js'], tasks: ['clean:folderJsLib','copy::jsLib']},
             libassets: {files: ['src/assets/**/*'], tasks: ['clean:folderAssets','copy:libassets']},
-            htmlComponent: {files: ['src/html/**'], tasks: ['copy:htmlComponent']},
-            txtComponent: {files: ['src/txt/**'], tasks: ['copy:txtComponent']},
-            jsonFolder: {files: ['src/json/**'], tasks: ['copy:json']},
+            htmlComponent: {files: ['src/html/**'], tasks: ['clean:folderhtm','copy:htmlComponent']},
+            txtComponent: {files: ['src/txt/**'], tasks: ['clean:foldertxt','copy:txtComponent']},
+            jsonFolder: {files: ['src/json/**'], tasks: ['clean:folderJson','copy:json']},
         }
     });
 
