@@ -1,6 +1,6 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "Charge prices",
+    "short_name": "Charge prices",
     "icons": [
         {
             "src": "android-chrome-192x192.png",
@@ -15,5 +15,6 @@
     ],
     "theme_color": "#333333",
     "background_color": "#333333",
-    "display": "standalone"
+    "display": "standalone",
+    "lang": "Spanish"
 }
