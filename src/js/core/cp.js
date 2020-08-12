@@ -169,11 +169,11 @@ function format (d) {
             '</li>'+
              '<li>'+
                 '<span>'+'Ubicación '+'</span>'+
-                '<span><a href='+d.location_url+' target="blank">'+d.location+'</a></span>'+
+                '<span><a href='+d.location.url+' target="blank">'+d.location.loc+'</a></span>'+
             '</li>'+
             '<li>'+
                 '<span>'+'Aplicación '+'</span>'+
-                '<span><a href='+d.app_url+' target="blank">'+d.app_name+'</a></span>'+
+                '<span><a href='+d.app.url+' target="blank">'+d.app.name+'</a></span>'+
             '</li>'+
             '<li>'+
                 '<span>'+'Observaciones '+'</span>'+
