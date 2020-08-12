@@ -5,8 +5,8 @@
   @extend %fontnormal;
 
   .dataTables_processing{
-    height:6.4rem;
-    width: 6.4rem;
+    width: 17rem;
+    height: 8rem;
     margin: 0 auto;
     text-indent:-999999em;
     @include svg(load,center center);

@@ -8,6 +8,7 @@
 */
 
 var chargeAPI ="https://raw.githubusercontent.com/Suriv/cp_json/master/db_gen.json",
+// Prueba Load chargeAPI ="https://raw.githubusercontent.com/Suriv/cp_json/master/db_private.json",
 n = new Date(),
 months=['Enero','Febrero','Marzo','Abril', 'Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
 date = months[n.getMonth()];
