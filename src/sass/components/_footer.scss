@@ -12,6 +12,9 @@ footer{
   font-size:1.6rem;
   line-height: 3rem;
   font-weight: 200;
+  p{
+    font-size:1.4rem;
+  }
   @media (map-get($rd-types, md)){
     position: fixed;
     bottom:0;

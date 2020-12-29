@@ -4,7 +4,7 @@ Web dónde se recoge los precios de los Operadores de Punto de Carga (CPO) .
 
 ## Agradecimientos
 
-Esta página no hubiera sido creada por la colaboración desinteresada del foro eléctricos, foroEV, y el [hilo](http://foroev.com/index.php?topic=4466.90) dónde se presta dicha información
+Esta página no hubiera sido creada por la colaboración desinteresada del foroEV, y el [hilo](http://foroev.com/index.php?topic=4466.90)
 
 ## Referencias de tarifas
 * [AMB Area Metropolitana de Barcelona](http://www.amb.cat/s/es/web/mobilitat/mobilitat-sostenible/electrolineres.html)
