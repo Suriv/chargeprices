@@ -1,7 +1,7 @@
 ### Project specific config ###
 language: node_js
 node_js:
-  - "23.11.1"
+  - "24.16.0"
 before_script:
   - npm install grunt-cli -g
 branches:

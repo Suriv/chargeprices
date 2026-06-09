@@ -31,5 +31,4 @@ Last update: 2020/07/29
 
 
 Standards: HTML5, CSS3
-
 Components: jQuery, dataTables.
